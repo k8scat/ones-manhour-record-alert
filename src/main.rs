@@ -9,7 +9,7 @@ use anyhow::Result;
 #[tokio::main]
 async fn main() -> Result<()> {
     let matches = App::new("ONES Manhour Record Alert")
-        .version("0.1.0")
+        .version("0.1.2")
         .author("RustPanic <rustpanic@gmail.com>")
         .about("ONES 工时登记提醒机器人\nRepository: https://github.com/k8scat/ones-manhour-record-alert.git")
         .arg(Arg::with_name("config")

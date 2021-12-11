@@ -2,6 +2,20 @@
 
 ONES 工时登记提醒机器人
 
+## 安装
+
+### 使用 Cargo
+
+```bash
+cargo install --version 0.1.2 ones-manhour-record-alert
+```
+
+安装目录：`$HOME/.cargo/bin`
+
+### 下载二进制文件
+
+https://github.com/k8scat/ones-manhour-record-alert/releases
+
 ## 使用
 
 ```bash
