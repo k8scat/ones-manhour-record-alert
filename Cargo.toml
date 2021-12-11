@@ -1,6 +1,6 @@
 [package]
 name = "ones-manhour-record-alert"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2021"
 description = "ONES 工时登记提醒机器人"
 license = "MIT"

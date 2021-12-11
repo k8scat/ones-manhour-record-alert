@@ -4,4 +4,6 @@ alert_webhook: ""
 members:
   - ""
   - ""
-at_all: false
+at_all: true
+base_api: "https://ones.ai/project/api"
+days: 7

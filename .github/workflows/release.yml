@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - v*
+      - "v*.*.*"
 
 jobs:
   release:
@@ -59,6 +59,7 @@ jobs:
           upload_url: ${{ needs.release.outputs.upload_url }}
           asset_path: target/release/ones-manhour-record-alert
           asset_name: ones-manhour-record-alert-${{ steps.get_version.outputs.VERSION }}-linux-amd64
+          asset_content_type: application/octet-stream
 
   macos-release:
     name: Build on MacOS
@@ -82,3 +83,4 @@ jobs:
           upload_url: ${{ needs.release.outputs.upload_url }}
           asset_path: target/release/ones-manhour-record-alert
           asset_name: ones-manhour-record-alert-${{ steps.get_version.outputs.VERSION }}-darwin-amd64
+          asset_content_type: application/octet-stream
