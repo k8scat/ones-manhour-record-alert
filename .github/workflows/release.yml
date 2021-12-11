@@ -48,8 +48,10 @@ jobs:
           toolchain: stable
       - name: Build
         run: cargo build --release --all-features
+      - name: Get version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: Upload assets
-        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -69,6 +71,9 @@ jobs:
           toolchain: stable
       - name: Build
         run: cargo build --release --all-features
+      - name: Get version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: Upload assets
         uses: actions/upload-release-asset@v1
         env:
